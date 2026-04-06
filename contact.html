@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Willametro IT Solutions LLC</title>
+  <meta name="description" content="Contact Willametro IT Solutions LLC for IT support, low voltage installation, and technology consulting in Salem, OR.">
+  <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">WILLAMETRO<span>_IT</span></a>
+    <div class="nav-links">
+      <a href="index.html">home</a>
+      <a href="about.html">about</a>
+      <a href="index.html#services">services</a>
+      <a href="blog.html">blog</a>
+      <a href="contact.html" class="active">contact</a>
+    </div>
+    <button id="nav-toggle" onclick="toggleMenu()" aria-label="Toggle menu">&#9776;</button>
+  </div>
+  <div id="mobile-menu">
+    <a href="index.html">home</a>
+    <a href="about.html">about</a>
+    <a href="index.html#services">services</a>
+    <a href="blog.html">blog</a>
+    <a href="contact.html">contact</a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">home</a><span class="sep">/</span><span class="cur">contact</span>
+    </div>
+    <h1>Get in Touch</h1>
+    <p>Free consultation for all small businesses. No commitment required.</p>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="contact-grid">
+
+      <div class="contact-info">
+        <div class="section-label" style="margin-bottom:1.25rem;">Direct Contact</div>
+
+        <div class="info-item">
+          <span class="info-icon">@</span>
+          <div>
+            <div class="info-label">Email</div>
+            <div class="info-value"><a href="mailto:info@willametro.com">info@willametro.com</a></div>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <span class="info-icon">#</span>
+          <div>
+            <div class="info-label">Phone</div>
+            <div class="info-value"><a href="tel:9715998949">(971) 599-8949</a></div>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <span class="info-icon">$</span>
+          <div>
+            <div class="info-label">Service Area</div>
+            <div class="info-value">Salem, Keizer, Silverton, Woodburn, Dallas, and surrounding Willamette Valley</div>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <span class="info-icon">&gt;</span>
+          <div>
+            <div class="info-label">Hours</div>
+            <div class="info-value">Mon&ndash;Fri: 8am&ndash;6pm<br>Sat: By appointment<br>Emergency support available</div>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <span class="info-icon">~</span>
+          <div>
+            <div class="info-label">LinkedIn</div>
+            <div class="info-value"><a href="https://www.linkedin.com/company/104410669/" target="_blank" rel="noopener">Willametro IT Solutions</a></div>
+          </div>
+        </div>
+
+        <div style="margin-top:2rem; padding:1.25rem; background:var(--bg-card); border:1px solid var(--border-mid);">
+          <div class="section-label" style="margin-bottom:0.5rem; font-size:0.65rem;">Response Time</div>
+          <p style="color:var(--text-muted); font-size:0.77rem; line-height:1.8;">We aim to respond to all inquiries within one business day. For urgent support needs, please call directly.</p>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <div class="form-header">new-message --to=willametro</div>
+        <form class="form-body" action="https://formspree.io/f/mnnbrgjq" method="POST">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Jane Smith" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="jane@yourbusiness.com" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="(503) 555-0000">
+          </div>
+          <div class="form-group">
+            <label for="service">Service Interest</label>
+            <select id="service" name="service">
+              <option value="">-- Select a category --</option>
+              <option value="low-voltage">Low Voltage Installation</option>
+              <option value="managed-it">Managed IT &amp; Help Desk</option>
+              <option value="networking">Network &amp; Infrastructure</option>
+              <option value="cybersecurity">Cybersecurity</option>
+              <option value="business-tech">Business Solutions</option>
+              <option value="web-dev">Web Development</option>
+              <option value="residential">Smart Home / Residential</option>
+              <option value="consulting">IT Consulting</option>
+              <option value="other">Other / Not Sure</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us about your project or issue..." required></textarea>
+          </div>
+          <input type="text" name="_gotcha" style="display:none">
+          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Send Message</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo">WILLAMETRO<span style="color:var(--text-dim)">_IT</span></div>
+        <p>Willametro IT Solutions LLC<br>Salem, OR &mdash; Willamette Valley<br>Licensed LE-B | Est. 2024</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Partners</h4>
+        <ul>
+          <li><a href="https://www.facebook.com/people/Andrade-Construction-LLC/100063745493183/" target="_blank" rel="noopener">Andrade Construction</a></li>
+          <li><a href="https://flawlesswebdesign.com/home" target="_blank" rel="noopener">Flawless Web LLC</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="legal/privacy.html">Privacy Policy</a></li>
+          <li><a href="legal/terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">&copy; 2024&ndash;2026 Willametro IT Solutions LLC. All rights reserved.</span>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/company/104410669/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:info@willametro.com">Email</a>
+        <a href="tel:9715998949">Phone</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('mobile-menu').classList.toggle('open');
+  }
+  document.addEventListener('click', function(e) {
+    if (!document.getElementById('nav').contains(e.target)) {
+      document.getElementById('mobile-menu').classList.remove('open');
+    }
+  });
+</script>
+</body>
+</html>

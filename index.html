@@ -1,414 +1,446 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Willametro IT Solutions LLC | Salem IT Services</title>
-    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
-    <style>
-        .hero-gradient {
-            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #3b82f6 100%);
-        }
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-        .nav-link:hover {
-            color: #3b82f6;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Willametro IT Solutions LLC | Salem, OR</title>
+  <meta name="description" content="Salem-based low voltage installation, managed IT, networking, cybersecurity, and web development. Serving the Willamette Valley since 2024.">
+  <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="font-sans antialiased text-gray-800">
-    <div id="vanta-bg" class="fixed inset-0 -z-10 opacity-20"></div>
-    
-    <!-- Navigation -->
-    <nav class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <div class="flex-shrink-0 flex items-center">
-                        <i data-feather="cpu" class="h-8 w-8 text-blue-600"></i>
-                        <span class="ml-2 text-xl font-bold text-gray-900">Willametro IT</span>
-                    </div>
-                </div>
-                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
-                    <a href="#about" class="nav-link px-3 py-2 text-sm font-medium">About</a>
-                    <a href="#services" class="nav-link px-3 py-2 text-sm font-medium">Services</a>
-                    <a href="#contact" class="nav-link px-3 py-2 text-sm font-medium">Contact</a>
-                    <a href="blog.willametro.com" class="px-3 py-2 text-sm font-medium text-blue-600 hover:text-blue-800">Blog</a>
-                </div>
-                <div class="-mr-2 flex items-center md:hidden">
-                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-controls="mobile-menu" aria-expanded="false">
-                        <i data-feather="menu"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </nav>
+<body>
 
-    <!-- Hero Section -->
-    <div class="hero-gradient text-white">
-        <div class="max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:px-8">
-            <div class="text-center" data-aos="fade-up">
-                <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
-                    Technology Solutions for Salem
-                </h1>
-                <p class="mt-6 max-w-3xl mx-auto text-xl">
-                    Professional IT services for businesses and homeowners in the Willamette Valley
-                </p>
-                <div class="mt-10 flex justify-center space-x-4">
-                    <a href="#contact" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-blue-700 bg-white hover:bg-gray-50">
-                        Contact Us
-                    </a>
-                    <a href="#services" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-800 bg-opacity-60 hover:bg-opacity-70">
-                        Our Services
-                    </a>
-                </div>
-            </div>
+<!-- ── NAV ─────────────────────────────────────────────── -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">WILLAMETRO<span>_IT</span></a>
+    <div class="nav-links">
+      <a href="index.html" class="active">home</a>
+      <a href="about.html">about</a>
+      <a href="index.html#services">services</a>
+      <a href="blog.html">blog</a>
+      <a href="contact.html">contact</a>
+    </div>
+    <button id="nav-toggle" onclick="toggleMenu()" aria-label="Toggle menu">&#9776;</button>
+  </div>
+  <div id="mobile-menu">
+    <a href="index.html">home</a>
+    <a href="about.html">about</a>
+    <a href="index.html#services">services</a>
+    <a href="blog.html">blog</a>
+    <a href="contact.html">contact</a>
+  </div>
+</nav>
+
+<!-- ── HERO ─────────────────────────────────────────────── -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-grid">
+
+      <div class="hero-copy">
+        <div class="section-label">Salem, OR &mdash; Est. 2024</div>
+        <h1>From the <span class="hl">wire in the wall</span><br>to the app in the cloud.</h1>
+        <p class="sub">Low voltage infrastructure, managed IT, and full-service technology support for small businesses in the Willamette Valley.</p>
+        <div class="hero-btns">
+          <a href="contact.html" class="btn btn-primary">Get a Free Consult</a>
+          <a href="index.html#services" class="btn btn-outline">View Services</a>
         </div>
+      </div>
+
+      <div class="hero-term">
+        <div class="term-bar">
+          <span class="term-dot r"></span>
+          <span class="term-dot y"></span>
+          <span class="term-dot g"></span>
+          <span class="term-title">willametro@system: ~</span>
+        </div>
+        <div class="term-body" id="boot-terminal">
+          <span class="term-line t-dim"># system init — willametro-it v2.0</span>
+          <span class="term-line">&nbsp;</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── SERVICE TIER PATH ─────────────────────────────────── -->
+<div id="service-path">
+  <div class="container">
+    <div style="text-align:center; margin-bottom:1.5rem;">
+      <span class="section-label" style="display:inline-block;">Our Service Progression</span>
+    </div>
+    <div class="tier-track">
+      <div class="tier-node">
+        <span class="tier-num">LAYER 01</span>
+        <span class="tier-name">Low Voltage</span>
+        <span class="tier-desc">Physical infrastructure — cabling, cameras, access control, AV</span>
+      </div>
+      <div class="tier-arrow">&#8594;</div>
+      <div class="tier-node">
+        <span class="tier-num">LAYER 02</span>
+        <span class="tier-name">Network &amp; IT</span>
+        <span class="tier-desc">Managed IT, networking, help desk, servers, cybersecurity</span>
+      </div>
+      <div class="tier-arrow">&#8594;</div>
+      <div class="tier-node">
+        <span class="tier-num">LAYER 03</span>
+        <span class="tier-name">Full-Service</span>
+        <span class="tier-desc">Strategy, web development, and ongoing managed services</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── SERVICES ──────────────────────────────────────────── -->
+<section id="services">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">What We Do</div>
+      <h2 class="section-title">Services</h2>
+      <p class="section-sub">Scalable technology services for small businesses — from your first cable run to enterprise-grade IT management.</p>
     </div>
 
-    <!-- About Section -->
-    <div id="about" class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="lg:text-center" data-aos="fade-up">
-                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">About Us</h2>
-                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                    Willametro IT Solutions LLC
-                </p>
-            </div>
+    <div class="services-grid">
 
-            <div class="mt-10">
-                <div class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
-                    <div class="relative" data-aos="fade-right">
-                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
-                            <i data-feather="map-pin"></i>
-                        </div>
-                        <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Salem Local</p>
-                        <p class="mt-2 ml-16 text-base text-gray-500">
-                            Serving the Willamette Valley with pride since 2024. We're your neighbors, committed to providing exceptional local service.
-                        </p>
-                    </div>
+      <!-- Low Voltage -->
+      <div class="svc-card">
+        <span class="svc-tag lv">LE-B Licensed</span>
+        <div class="svc-title">Low Voltage Infrastructure</div>
+        <ul class="svc-list">
+          <li>Structured Cabling (Cat5e / Cat6 / Cat6A)</li>
+          <li>Security Camera Systems (CCTV &amp; IP)</li>
+          <li>Access Control &amp; Keycard Systems</li>
+          <li>Audio/Visual Systems &amp; Media Installs</li>
+          <li>Intercom &amp; Video Doorbell Systems</li>
+          <li>Network Rack Builds &amp; Cable Management</li>
+        </ul>
+      </div>
 
-                    <div class="relative" data-aos="fade-left">
-                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
-                            <i data-feather="user"></i>
-                        </div>
-                        <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Owner / Operator</p>
-                        <p class="mt-2 ml-16 text-base text-gray-500">
-                            Jacob Powell brings years of technical expertise and a commitment to customer satisfaction to every project.
-                        </p>
-                    </div>
+      <!-- Managed IT -->
+      <div class="svc-card">
+        <span class="svc-tag it">Managed IT</span>
+        <div class="svc-title">IT Support &amp; Help Desk</div>
+        <ul class="svc-list">
+          <li>Computer Repair &amp; Maintenance</li>
+          <li>Workstation &amp; Server Management</li>
+          <li>Remote Support &amp; Monitoring</li>
+          <li>Software &amp; Application Management</li>
+          <li>Managed Updates &amp; Patching</li>
+          <li>Hardware Procurement &amp; Setup</li>
+        </ul>
+      </div>
 
-                    <div class="relative" data-aos="fade-right">
-                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
-                            <i data-feather="target"></i>
-                        </div>
-                        <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Our Mission</p>
-                        <p class="mt-2 ml-16 text-base text-gray-500">
-                            To empower our clients through innovative technology solutions, exceptional customer service, and ongoing support.
-                        </p>
-                    </div>
+      <!-- Networking -->
+      <div class="svc-card">
+        <span class="svc-tag it">Networking</span>
+        <div class="svc-title">Network &amp; Infrastructure</div>
+        <ul class="svc-list">
+          <li>Network Design &amp; Optimization</li>
+          <li>Wireless Network Solutions</li>
+          <li>VLAN Segmentation &amp; Firewall Config</li>
+          <li>VoIP &amp; Business Phone Systems</li>
+          <li>Site Surveys &amp; Coverage Mapping</li>
+          <li>ISP Coordination &amp; Onboarding</li>
+        </ul>
+      </div>
 
-                    <div class="relative" data-aos="fade-left">
-                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
-                            <i data-feather="award"></i>
-                        </div>
-                        <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Professional Approach</p>
-                        <p class="mt-2 ml-16 text-base text-gray-500">
-                            We combine technical expertise with clear communication to deliver solutions that meet your specific needs.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
+      <!-- Cybersecurity -->
+      <div class="svc-card">
+        <span class="svc-tag it">Cybersecurity</span>
+        <div class="svc-title">Security &amp; Data Protection</div>
+        <ul class="svc-list">
+          <li>Security Audits &amp; Vulnerability Scanning</li>
+          <li>Endpoint Security Management</li>
+          <li>Managed Firewall &amp; VPN Services</li>
+          <li>Data Backup &amp; Disaster Recovery</li>
+          <li>Cybersecurity Awareness Training</li>
+          <li>Incident Response Planning</li>
+        </ul>
+      </div>
+
+      <!-- Business Solutions -->
+      <div class="svc-card">
+        <span class="svc-tag it">Business Tech</span>
+        <div class="svc-title">Business Solutions</div>
+        <ul class="svc-list">
+          <li>Point-of-Sale Systems &amp; Retail Tech</li>
+          <li>Digital Signage &amp; Display Systems</li>
+          <li>Surveillance &amp; Physical Security</li>
+          <li>Commercial Print Solutions</li>
+          <li>IT Strategy &amp; Technology Planning</li>
+          <li>Vendor Management &amp; Procurement</li>
+        </ul>
+      </div>
+
+      <!-- Web Development -->
+      <div class="svc-card">
+        <span class="svc-tag web">Web Dev</span>
+        <div class="svc-title">Web Development &amp; Design</div>
+        <ul class="svc-list">
+          <li>Custom Website Design &amp; Build</li>
+          <li>E-Commerce &amp; Online Stores</li>
+          <li>Web Application Development</li>
+          <li>SEO &amp; Digital Presence</li>
+          <li>Hosting, DNS &amp; Domain Management</li>
+          <li>Delivered via <a href="https://flawlesswebdesign.com/home" target="_blank" rel="noopener">Flawless Web LLC</a></li>
+        </ul>
+      </div>
+
+      <!-- Smart Home / Residential -->
+      <div class="svc-card">
+        <span class="svc-tag res">Residential</span>
+        <div class="svc-title">Smart Home &amp; Residential</div>
+        <ul class="svc-list">
+          <li>Smart Home Automation Setup</li>
+          <li>Home Theater &amp; Media Systems</li>
+          <li>Home Office Network Solutions</li>
+          <li>In-Home Technology Support</li>
+          <li>Parental Controls &amp; Internet Safety</li>
+          <li>Whole-Home Wi-Fi Solutions</li>
+        </ul>
+      </div>
+
+      <!-- Consulting -->
+      <div class="svc-card">
+        <span class="svc-tag it">Consulting</span>
+        <div class="svc-title">IT Consulting &amp; Projects</div>
+        <ul class="svc-list">
+          <li>IT Roadmap &amp; Strategic Planning</li>
+          <li>IT Project Management</li>
+          <li>Technical Documentation &amp; Audits</li>
+          <li>Cloud Migration Assistance</li>
+          <li>M365 &amp; Google Workspace Setup</li>
+          <li>New Business Tech Onboarding</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── STATS ─────────────────────────────────────────────── -->
+<div id="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <span class="stat-num">LE-B</span>
+        <span class="stat-label">Oregon Licensed</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">2024</span>
+        <span class="stat-label">Founded in Salem, OR</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">3</span>
+        <span class="stat-label">Affiliated Partners</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">∞</span>
+        <span class="stat-label">Scalable Solutions</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── PARTNERS ──────────────────────────────────────────── -->
+<section id="partners">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Affiliated Companies</div>
+      <h2 class="section-title">Partners</h2>
+      <p class="section-sub">We work alongside trusted partners to deliver complete solutions across construction, tech, and web services.</p>
     </div>
 
-    <!-- Services Section -->
-    <div id="services" class="py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="lg:text-center" data-aos="fade-up">
-                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Services</h2>
-                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                    Comprehensive IT Solutions
-                </p>
-                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-                    From networking to cybersecurity, we provide a full range of technology services.
-                </p>
-            </div>
+    <div class="partners-grid">
 
-            <div class="mt-10">
-                <div class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
-                    <!-- Managed IT -->
-                    <div class="service-card relative bg-white p-6 rounded-lg shadow transition-all duration-300" data-aos="fade-up">
-                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
-                            <i data-feather="cpu"></i>
-                        </div>
-                        <h3 class="ml-16 text-lg leading-6 font-medium text-gray-900">Managed IT & Help Desk</h3>
-                        <ul class="mt-2 ml-16 text-base text-gray-500 list-disc pl-5">
-                            <li>Computer Repair & Maintenance</li>
-                            <li>Workstation & Server Management</li>
-                            <li>Remote Support & Monitoring</li>
-                            <li>Software & Application Management</li>
-                            <li>Managed Updates & Patching</li>
-                        </ul>
-                    </div>
+      <div class="partner-card">
+        <span class="partner-corner">01</span>
+        <div class="partner-type">Construction Partner</div>
+        <div class="partner-name">Andrade Construction LLC</div>
+        <p class="partner-desc">General construction and contracting services in the Willamette Valley. We partner with Andrade Construction to offer seamless coordination between physical construction and low voltage / IT infrastructure installs — from new builds to renovations.</p>
+        <a href="https://www.facebook.com/people/Andrade-Construction-LLC/100063745493183/" target="_blank" rel="noopener" class="partner-link">View on Facebook</a>
+      </div>
 
-                    <!-- Network Solutions -->
-                    <div class="service-card relative bg-white p-6 rounded-lg shadow transition-all duration-300" data-aos="fade-up">
-                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
-                            <i data-feather="globe"></i>
-                        </div>
-                        <h3 class="ml-16 text-lg leading-6 font-medium text-gray-900">Network & Infrastructure</h3>
-                        <ul class="mt-2 ml-16 text-base text-gray-500 list-disc pl-5">
-                            <li>Structured Cabling & Installation</li>
-                            <li>Wireless Network Solutions</li>
-                            <li>Network Design & Optimization</li>
-                            <li>Advanced Networking (VLANs, Firewalls)</li>
-                            <li>VoIP & Telecommunications</li>
-                        </ul>
-                    </div>
+      <div class="partner-card">
+        <span class="partner-corner">02</span>
+        <div class="partner-type">Web Development Partner</div>
+        <div class="partner-name">Flawless Web LLC</div>
+        <p class="partner-desc">Professional web design and development services. Our partnership with Flawless Web means your business gets expert website design, e-commerce builds, and digital presence work delivered alongside our IT and infrastructure services.</p>
+        <a href="https://flawlesswebdesign.com/home" target="_blank" rel="noopener" class="partner-link">Visit Website</a>
+      </div>
 
-                    <!-- Cybersecurity -->
-                    <div class="service-card relative bg-white p-6 rounded-lg shadow transition-all duration-300" data-aos="fade-up">
-                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
-                            <i data-feather="shield"></i>
-                        </div>
-                        <h3 class="ml-16 text-lg leading-6 font-medium text-gray-900">Cybersecurity & Data</h3>
-                        <ul class="mt-2 ml-16 text-base text-gray-500 list-disc pl-5">
-                            <li>Security Audits & Vulnerability Scanning</li>
-                            <li>Endpoint Security Management</li>
-                            <li>Managed Firewall & VPN Services</li>
-                            <li>Data Backup & Disaster Recovery</li>
-                            <li>Cybersecurity Training</li>
-                        </ul>
-                    </div>
+    </div>
+  </div>
+</section>
 
-                    <!-- Consulting -->
-                    <div class="service-card relative bg-white p-6 rounded-lg shadow transition-all duration-300" data-aos="fade-up">
-                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
-                            <i data-feather="clipboard"></i>
-                        </div>
-                        <h3 class="ml-16 text-lg leading-6 font-medium text-gray-900">Consulting & Projects</h3>
-                        <ul class="mt-2 ml-16 text-base text-gray-500 list-disc pl-5">
-                            <li>IT Strategy & Planning</li>
-                            <li>IT Project Management</li>
-                            <li>Technical Documentation & Audits</li>
-                            <li>Vendor Management</li>
-                            <li>Technology Procurement</li>
-                        </ul>
-                    </div>
-
-                    <!-- Business Solutions -->
-                    <div class="service-card relative bg-white p-6 rounded-lg shadow transition-all duration-300" data-aos="fade-up">
-                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
-                            <i data-feather="briefcase"></i>
-                        </div>
-                        <h3 class="ml-16 text-lg leading-6 font-medium text-gray-900">Business Solutions</h3>
-                        <ul class="mt-2 ml-16 text-base text-gray-500 list-disc pl-5">
-                            <li>PoS Systems & Retail Technology</li>
-                            <li>Surveillance & Access Control</li>
-                            <li>Digital Signage & Displays</li>
-                            <li>Commercial Print Solutions</li>
-                        </ul>
-                    </div>
-
-                    <!-- Smart Home -->
-                    <div class="service-card relative bg-white p-6 rounded-lg shadow transition-all duration-300" data-aos="fade-up">
-                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
-                            <i data-feather="home"></i>
-                        </div>
-                        <h3 class="ml-16 text-lg leading-6 font-medium text-gray-900">Smart Home Services</h3>
-                        <ul class="mt-2 ml-16 text-base text-gray-500 list-disc pl-5">
-                            <li>In-Home Technology Support</li>
-                            <li>Smart Home Automation</li>
-                            <li>Home Theater & Media Setup</li>
-                            <li>Home Office Solutions</li>
-                            <li>Parental Controls & Internet Safety</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="mt-10 text-center">
-                    <a href="#contact" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700">
-                        Get a Free Consultation
-                    </a>
-                    <p class="mt-4 text-sm text-gray-500">We offer comprehensive IT solutions tailored to your business or home needs</p>
-                </div>
-            </div>
-        </div>
+<!-- ── BLOG PREVIEW ──────────────────────────────────────── -->
+<section id="blog-preview">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Knowledge Base</div>
+      <h2 class="section-title">Latest from the Blog</h2>
+      <p class="section-sub">Guides, tips, and insights for small business technology decisions.</p>
     </div>
 
-    <!-- Contact Section -->
-    <div id="contact" class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="lg:text-center" data-aos="fade-up">
-                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Contact Us</h2>
-                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                    Get in Touch
-                </p>
-            </div>
+    <div class="blog-grid">
 
-            <div class="mt-10 grid grid-cols-1 gap-8 lg:grid-cols-2">
-                <div data-aos="fade-right">
-                    <div class="bg-gray-50 p-6 rounded-lg shadow">
-                        <h3 class="text-lg font-medium text-gray-900">Contact Information</h3>
-                        <div class="mt-4 space-y-4">
-                            <div class="flex items-start">
-                                <div class="flex-shrink-0">
-                                    <i data-feather="mail" class="h-6 w-6 text-blue-600"></i>
-                                </div>
-                                <div class="ml-3 text-base text-gray-500">
-                                    <p>Email: <a href="mailto:info@willametro.com" class="text-blue-600 hover:text-blue-800">info@willametro.com</a></p>
-                                </div>
-                            </div>
-                            <div class="flex items-start">
-                                <div class="flex-shrink-0">
-                                    <i data-feather="phone" class="h-6 w-6 text-blue-600"></i>
-                                </div>
-                                <div class="ml-3 text-base text-gray-500">
-                                    <p>Phone: <a href="tel:9715998949" class="text-blue-600 hover:text-blue-800">(971) 599-8949</a></p>
-                                </div>
-                            </div>
-                            <div class="flex items-start">
-                                <div class="flex-shrink-0">
-                                    <i data-feather="map-pin" class="h-6 w-6 text-blue-600"></i>
-                                </div>
-                                <div class="ml-3 text-base text-gray-500">
-                                    <p>Serving Salem, OR and surrounding areas</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="mt-6">
-                            <h4 class="text-md font-medium text-gray-900">Connect With Us</h4>
-                            <div class="mt-2 flex space-x-4">
-                                <a href="#" class="text-gray-400 hover:text-blue-600">
-                                    <i data-feather="linkedin"></i>
-                                </a>
-                                <a href="#" class="text-gray-400 hover:text-blue-600">
-                                    <i data-feather="facebook"></i>
-                                </a>
-                                <a href="#" class="text-gray-400 hover:text-blue-600">
-                                    <i data-feather="message-square"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div data-aos="fade-left">
-			<div class="bg-gray-50 p-6 rounded-lg shadow">
-				<h3 class="text-lg font-medium text-gray-900">Send Us a Message</h3>
-				<form action="https://formspree.io/f/mnnbrgjq" method="POST" class="mt-4 space-y-4">
-					<div>
-						<label for="name" class="block text-sm font-medium text-gray-700">Name</label>
-						<input type="text" id="name" name="name" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
-					</div>
-					<div>
-						<label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-						<input type="email" id="email" name="email" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
-					</div>
-					<div>
-						<label for="phone" class="block text-sm font-medium text-gray-700">Phone</label>
-						<input type="tel" id="phone" name="phone" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
-					</div>
-					<div>
-						<label for="message" class="block text-sm font-medium text-gray-700">Message</label>
-						<textarea id="message" name="message" rows="4" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500"></textarea>
-					</div>
-					<input type="text" name="_gotcha" style="display:none">
-					<div>
-						<button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-							Send Message
-						</button>
-					</div>
-				</form>
-			</div>
-		</div>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800">
-        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div>
-                    <h3 class="text-white text-lg font-semibold">Willametro IT Solutions LLC</h3>
-                    <p class="mt-2 text-gray-300">
-                        Providing professional IT services to Salem and the Willamette Valley.
-                    </p>
-                </div>
-                <div>
-                    <h3 class="text-white text-lg font-semibold">Quick Links</h3>
-                    <ul class="mt-2 space-y-2">
-                        <li><a href="#about" class="text-gray-300 hover:text-white">About Us</a></li>
-                        <li><a href="#services" class="text-gray-300 hover:text-white">Services</a></li>
-                        <li><a href="#contact" class="text-gray-300 hover:text-white">Contact</a></li>
-                        <li><a href="blog.willametro.com" class="text-gray-300 hover:text-white">Blog</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-white text-lg font-semibold">Legal</h3>
-                    <ul class="mt-2 space-y-2">
-                        <li><a href="#" class="text-gray-300 hover:text-white">Privacy Policy</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white">Terms of Service</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="mt-8 border-t border-gray-700 pt-8 md:flex md:items-center md:justify-between">
-                <div class="flex space-x-6 md:order-2">
-                    <a href="#" class="text-gray-400 hover:text-white">
-                        <i data-feather="linkedin"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white">
-                        <i data-feather="facebook"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white">
-                        <i data-feather="message-square"></i>
-                    </a>
-                </div>
-                <p class="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
-                    &copy; 2024 Willametro IT Solutions LLC. All rights reserved.
-                </p>
-            </div>
+      <a href="blog/small-business-it.html" class="blog-card">
+        <div class="blog-card-head">
+          <span class="blog-date">2026-03-15</span>
+          <span class="blog-tag">MANAGED IT</span>
         </div>
-    </footer>
+        <div class="blog-body">
+          <div class="blog-title">Why Small Businesses Need More Than Just WiFi</div>
+          <p class="blog-excerpt">Most small business owners treat networking as an afterthought. Here's why a structured approach to your IT foundation pays off from day one.</p>
+        </div>
+        <div class="blog-foot"><span class="read-more">Read more</span></div>
+      </a>
 
-    <script>
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true
-        });
-        
-        feather.replace();
-        
-        VANTA.NET({
-            el: "#vanta-bg",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            scale: 1.00,
-            scaleMobile: 1.00,
-            color: 0x3b82f6,
-            backgroundColor: 0xf8fafc,
-            points: 10.00,
-            maxDistance: 20.00,
-            spacing: 15.00
-        });
-        
-        // Mobile menu toggle
-        document.querySelector('[aria-controls="mobile-menu"]').addEventListener('click', function() {
-            // Implement mobile menu toggle functionality here
-            console.log('Mobile menu clicked');
-        });
-    </script>
+      <a href="blog/low-voltage-basics.html" class="blog-card">
+        <div class="blog-card-head">
+          <span class="blog-date">2026-02-28</span>
+          <span class="blog-tag">LOW VOLTAGE</span>
+        </div>
+        <div class="blog-body">
+          <div class="blog-title">Low Voltage Wiring Explained for Business Owners</div>
+          <p class="blog-excerpt">What is low voltage work, what's covered under Oregon LE-B licensing, and why it matters before your walls close up during a build or remodel.</p>
+        </div>
+        <div class="blog-foot"><span class="read-more">Read more</span></div>
+      </a>
+
+      <a href="blog/network-security-tips.html" class="blog-card">
+        <div class="blog-card-head">
+          <span class="blog-date">2026-02-10</span>
+          <span class="blog-tag">CYBERSECURITY</span>
+        </div>
+        <div class="blog-body">
+          <div class="blog-title">5 Cybersecurity Basics Every Salem SMB Should Have</div>
+          <p class="blog-excerpt">You don't need an enterprise budget to protect your business. These five fundamentals cover most of the risk for most small businesses.</p>
+        </div>
+        <div class="blog-foot"><span class="read-more">Read more</span></div>
+      </a>
+
+    </div>
+
+    <div style="margin-top:2rem; text-align:center;">
+      <a href="blog.html" class="btn btn-outline">View All Posts</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ───────────────────────────────────────────────── -->
+<section id="cta">
+  <div class="container">
+    <div style="display:flex; justify-content:center;">
+      <div class="cta-box">
+        <div class="cta-prompt">./contact --subject="free-consultation"</div>
+        <h2>Ready to build your tech foundation?</h2>
+        <p>Whether you're wiring a new space, upgrading your network, or looking for ongoing IT support — let's talk. Free initial consultation for all small businesses.</p>
+        <div class="hero-btns">
+          <a href="contact.html" class="btn btn-primary">Contact Us</a>
+          <a href="tel:9715998949" class="btn btn-outline">(971) 599-8949</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ────────────────────────────────────────────── -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo">WILLAMETRO<span style="color:var(--text-dim)">_IT</span></div>
+        <p>Willametro IT Solutions LLC<br>Salem, OR &mdash; Willamette Valley<br>Licensed LE-B | Est. 2024</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Partners</h4>
+        <ul>
+          <li><a href="https://www.facebook.com/people/Andrade-Construction-LLC/100063745493183/" target="_blank" rel="noopener">Andrade Construction</a></li>
+          <li><a href="https://flawlesswebdesign.com/home" target="_blank" rel="noopener">Flawless Web LLC</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="legal/privacy.html">Privacy Policy</a></li>
+          <li><a href="legal/terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">&copy; 2024&ndash;2026 Willametro IT Solutions LLC. All rights reserved.</span>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/company/104410669/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:info@willametro.com">Email</a>
+        <a href="tel:9715998949">Phone</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ── Mobile Menu ───────────────────────────────────────
+  function toggleMenu() {
+    const m = document.getElementById('mobile-menu');
+    m.classList.toggle('open');
+  }
+  document.addEventListener('click', function(e) {
+    const nav = document.getElementById('nav');
+    if (!nav.contains(e.target)) {
+      document.getElementById('mobile-menu').classList.remove('open');
+    }
+  });
+
+  // ── Boot Sequence Typewriter ─────────────────────────
+  const bootLines = [
+    { text: 'WILLAMETRO IT SOLUTIONS LLC', cls: 't-white' },
+    { text: 'Salem, OR \u2014 Licensed LE-B', cls: 't-dim' },
+    { text: '\u2500'.repeat(40), cls: 't-dim' },
+    { text: '', cls: '' },
+    { text: 'Loading services...', cls: 't-muted', delay: 400 },
+    { text: '  [LOW VOLTAGE]   \u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7 OK', cls: 't-green', delay: 300 },
+    { text: '  [MANAGED IT]    \u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7 OK', cls: 't-green', delay: 200 },
+    { text: '  [NETWORKING]    \u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7 OK', cls: 't-green', delay: 200 },
+    { text: '  [CYBERSECURITY] \u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7 OK', cls: 't-green', delay: 200 },
+    { text: '  [WEB DEV]       \u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7 OK', cls: 't-green', delay: 200 },
+    { text: '', cls: '' },
+    { text: '\u2500'.repeat(40), cls: 't-dim', delay: 300 },
+    { text: 'SYSTEM READY. Serving the Willamette Valley.', cls: 't-amber', delay: 400 },
+    { text: '', cls: '' },
+    { text: '$ _', cls: 't-green cursor', delay: 200 }
+  ];
+
+  (function runBoot() {
+    const container = document.getElementById('boot-terminal');
+    let i = 0;
+    let totalDelay = 300;
+
+    bootLines.forEach(function(line) {
+      const extra = line.delay || 0;
+      totalDelay += extra + 80;
+      const d = totalDelay;
+      setTimeout(function() {
+        const span = document.createElement('span');
+        span.className = 'term-line' + (line.cls ? ' ' + line.cls : '');
+        span.textContent = line.text || '\u00a0';
+        container.appendChild(span);
+        container.scrollTop = container.scrollHeight;
+      }, d);
+    });
+  })();
+</script>
+
 </body>
 </html>

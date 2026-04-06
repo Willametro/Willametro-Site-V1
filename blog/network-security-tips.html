@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5 Cybersecurity Basics for Salem Small Businesses | Willametro IT Blog</title>
+  <meta name="description" content="You don't need an enterprise budget to protect your business. Five fundamentals that cover most of the risk for most small businesses.">
+  <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">WILLAMETRO<span>_IT</span></a>
+    <div class="nav-links">
+      <a href="../index.html">home</a>
+      <a href="../about.html">about</a>
+      <a href="../index.html#services">services</a>
+      <a href="../blog.html" class="active">blog</a>
+      <a href="../contact.html">contact</a>
+    </div>
+    <button id="nav-toggle" onclick="toggleMenu()" aria-label="Toggle menu">&#9776;</button>
+  </div>
+  <div id="mobile-menu">
+    <a href="../index.html">home</a>
+    <a href="../about.html">about</a>
+    <a href="../index.html#services">services</a>
+    <a href="../blog.html">blog</a>
+    <a href="../contact.html">contact</a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../index.html">home</a><span class="sep">/</span>
+      <a href="../blog.html">blog</a><span class="sep">/</span>
+      <span class="cur">network-security-tips</span>
+    </div>
+    <h1>5 Cybersecurity Basics Every Salem SMB Should Have</h1>
+    <p>Practical protection without an enterprise budget.</p>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="post-meta">
+      <span>&#128197; 2026-02-10</span>
+      <span>&#128203; CYBERSECURITY</span>
+      <span>&#128100; Jacob Powell, Willametro IT</span>
+      <span>&#128337; 7 min read</span>
+    </div>
+
+    <article class="post-content">
+
+      <p>Cybersecurity feels overwhelming to most small business owners — and that's by design. The security industry sells complexity. But the reality is that most small business breaches happen through a handful of well-understood, preventable issues. You don't need a $50k security stack. You need these five things implemented and maintained consistently.</p>
+
+      <h2>1. Multi-Factor Authentication (MFA) on Everything</h2>
+      <p>This one item prevents more attacks than any other single measure. MFA requires a second verification step — usually a code from an app or text — beyond just a password. Even if an attacker steals your password through phishing or a data breach, they can't log in without that second factor.</p>
+
+      <p>Enable MFA on:</p>
+      <ul>
+        <li>Your Microsoft 365 or Google Workspace accounts (every user)</li>
+        <li>Your banking and financial accounts</li>
+        <li>Your email (this is your master key — if email is compromised, everything else can be reset)</li>
+        <li>Remote access tools (VPN, RDP, remote desktop)</li>
+        <li>Your domain registrar and DNS provider</li>
+      </ul>
+
+      <p>Authenticator apps (Google Authenticator, Microsoft Authenticator, Authy) are more secure than SMS codes. If your bank or service only offers SMS, that's still better than nothing — use it.</p>
+
+      <h2>2. A Managed Firewall, Not a Consumer Router</h2>
+      <p>Your ISP-provided router is not a security device. It's designed to get you online, not to protect you from inbound threats, monitor outbound traffic, or block known malicious destinations.</p>
+
+      <p>A business-grade firewall (like those from Fortinet, Ubiquiti, or Cisco Meraki) gives you:</p>
+      <ul>
+        <li>Stateful packet inspection — understanding what traffic should and shouldn't be there</li>
+        <li>Intrusion detection and prevention</li>
+        <li>DNS filtering to block known malicious sites</li>
+        <li>Traffic visibility so you can see what's actually happening on your network</li>
+        <li>VLAN support to segment your network properly</li>
+      </ul>
+
+      <p>For most small businesses, a properly configured business firewall in the $200–$500 range is the single highest-impact security purchase you can make.</p>
+
+      <h2>3. Endpoint Protection (Real Antivirus, Not Windows Defender Alone)</h2>
+      <p>Windows Defender has improved significantly and is a reasonable baseline. But for business use, a managed endpoint protection platform (EPP) gives you much more:</p>
+      <ul>
+        <li>Centralized management — you (or your IT provider) can see the status of all devices from one console</li>
+        <li>Behavioral detection — catching threats that don't match known signatures</li>
+        <li>Threat response and isolation — automatically quarantining an infected machine</li>
+        <li>Audit trail — understanding what happened if something goes wrong</li>
+      </ul>
+
+      <p>Solutions like SentinelOne, CrowdStrike Falcon Go, or Malwarebytes for Teams are priced for SMBs and manageable without a full-time security team.</p>
+
+      <h2>4. Automated, Tested Backups</h2>
+      <p>Ransomware attacks almost always end one of two ways: the victim pays (usually thousands to tens of thousands of dollars) or the victim restores from backup. Businesses with good backups recover. Businesses without them often don't.</p>
+
+      <div class="post-callout">
+        <strong style="color:var(--amber)">The 3-2-1 Rule:</strong> Keep 3 copies of your data, on 2 different types of media, with 1 copy offsite (or in cloud storage). This sounds complicated but modern backup tools make it straightforward.
+      </div>
+
+      <p>Equally important: test your backups. A backup you've never restored from is a backup you don't actually have. Schedule quarterly restoration tests. Your IT provider should be doing this if you're on a managed plan.</p>
+
+      <p>Critical systems to back up:</p>
+      <ul>
+        <li>File servers and shared drives</li>
+        <li>Email (Microsoft 365 and Google Workspace don't guarantee long-term retention by default)</li>
+        <li>QuickBooks or accounting software databases</li>
+        <li>Any custom databases or application data</li>
+        <li>Server configurations and virtual machines</li>
+      </ul>
+
+      <h2>5. Employee Security Awareness Training</h2>
+      <p>The most sophisticated firewall in the world won't stop an employee from clicking a phishing link and entering their Microsoft 365 credentials on a fake login page. Humans are the most commonly exploited attack vector — not because people are careless, but because attackers are very good at impersonation.</p>
+
+      <p>Effective security awareness training doesn't have to be a boring annual compliance video. It should include:</p>
+      <ul>
+        <li>Simulated phishing tests (sending fake phishing emails to see who clicks)</li>
+        <li>Short, regular reminders about current threat techniques</li>
+        <li>Clear reporting procedures — what to do when something suspicious happens</li>
+        <li>Specific guidance on email safety, password management, and social engineering</li>
+      </ul>
+
+      <p>Platforms like KnowBe4 or Proofpoint Security Awareness Training offer SMB pricing and make this manageable without an in-house security team.</p>
+
+      <h2>Where to Start</h2>
+      <p>If none of these are in place yet, don't try to do them all at once. Prioritize in this order: MFA first, then backups, then firewall. The first two cost almost nothing to implement and eliminate the most common vectors for serious damage.</p>
+
+      <p>If you're not sure where your business stands on any of these, Willametro IT offers a free security assessment for Willamette Valley small businesses. We'll walk through what you have, identify the gaps, and give you a clear prioritized roadmap — without a sales pitch for services you don't need.</p>
+
+    </article>
+
+    <div class="post-nav">
+      <a href="low-voltage-basics.html">&larr; Previous: Low Voltage Wiring Explained</a>
+      <a href="../blog.html">Back to Blog &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo">WILLAMETRO<span style="color:var(--text-dim)">_IT</span></div>
+        <p>Willametro IT Solutions LLC<br>Salem, OR &mdash; Willamette Valley<br>Licensed LE-B | Est. 2024</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About Us</a></li>
+          <li><a href="../index.html#services">Services</a></li>
+          <li><a href="../blog.html">Blog</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Partners</h4>
+        <ul>
+          <li><a href="https://www.facebook.com/people/Andrade-Construction-LLC/100063745493183/" target="_blank" rel="noopener">Andrade Construction</a></li>
+          <li><a href="https://flawlesswebdesign.com/home" target="_blank" rel="noopener">Flawless Web LLC</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="../legal/privacy.html">Privacy Policy</a></li>
+          <li><a href="../legal/terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">&copy; 2024&ndash;2026 Willametro IT Solutions LLC. All rights reserved.</span>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/company/104410669/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:info@willametro.com">Email</a>
+        <a href="tel:9715998949">Phone</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('mobile-menu').classList.toggle('open');
+  }
+  document.addEventListener('click', function(e) {
+    if (!document.getElementById('nav').contains(e.target)) {
+      document.getElementById('mobile-menu').classList.remove('open');
+    }
+  });
+</script>
+</body>
+</html>
