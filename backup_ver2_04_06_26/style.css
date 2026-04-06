@@ -289,8 +289,8 @@ section { padding: 5rem 0; }
 .blog-excerpt { color: var(--text-muted); font-size: 0.74rem; line-height: 1.75; }
 .blog-foot { padding: 0.7rem 1.2rem; border-top: 1px solid var(--border); display: flex; justify-content: flex-end; }
 .read-more { font-size: 0.7rem; color: var(--cyan); }
+.read-more:hover::after { color: var(--amber); }
 .read-more::after { content: ' →'; }
-.blog-card:hover .read-more { color: var(--amber); }
 
 /* ── CTA ────────────────────────────────────────────────── */
 #cta { background: var(--bg); padding: 5rem 0; text-align: center; }

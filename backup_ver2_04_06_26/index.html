@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Willametro IT Solutions LLC | Salem, OR</title>
   <meta name="description" content="Salem-based low voltage installation, managed IT, networking, cybersecurity, and web development. Serving the Willamette Valley since 2024.">
+  <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -231,7 +232,7 @@
         <span class="stat-label">Founded in Salem, OR</span>
       </div>
       <div class="stat-item">
-        <span class="stat-num">2</span>
+        <span class="stat-num">3</span>
         <span class="stat-label">Affiliated Partners</span>
       </div>
       <div class="stat-item">
@@ -352,7 +353,6 @@
       <div class="footer-brand">
         <div class="nav-logo">WILLAMETRO<span style="color:var(--text-dim)">_IT</span></div>
         <p>Willametro IT Solutions LLC<br>Salem, OR &mdash; Willamette Valley<br>Licensed LE-B | Est. 2024</p>
-        <p style="margin-top:0.6rem;"><a href="mailto:info@willametro.com" style="color:var(--text-dim)">info@willametro.com</a><br><a href="tel:9715998949" style="color:var(--text-dim)">(971) 599-8949</a></p>
       </div>
       <div class="footer-col">
         <h4>Navigate</h4>
@@ -393,10 +393,8 @@
 <script>
   // ── Mobile Menu ───────────────────────────────────────
   function toggleMenu() {
-    var m = document.getElementById('mobile-menu');
-    var btn = document.getElementById('nav-toggle');
+    const m = document.getElementById('mobile-menu');
     m.classList.toggle('open');
-    btn.innerHTML = m.classList.contains('open') ? '\u2715' : '\u2630';
   }
   document.addEventListener('click', function(e) {
     const nav = document.getElementById('nav');
@@ -411,7 +409,7 @@
     { text: 'Salem, OR \u2014 Licensed LE-B', cls: 't-dim' },
     { text: '\u2500'.repeat(40), cls: 't-dim' },
     { text: '', cls: '' },
-    { text: 'Loading services...', cls: 't-dim', delay: 400 },
+    { text: 'Loading services...', cls: 't-muted', delay: 400 },
     { text: '  [LOW VOLTAGE]   \u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7 OK', cls: 't-green', delay: 300 },
     { text: '  [MANAGED IT]    \u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7 OK', cls: 't-green', delay: 200 },
     { text: '  [NETWORKING]    \u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7 OK', cls: 't-green', delay: 200 },
@@ -421,7 +419,7 @@
     { text: '\u2500'.repeat(40), cls: 't-dim', delay: 300 },
     { text: 'SYSTEM READY. Serving the Willamette Valley.', cls: 't-amber', delay: 400 },
     { text: '', cls: '' },
-    { text: '$', cls: 't-green cursor', delay: 200 }
+    { text: '$ _', cls: 't-green cursor', delay: 200 }
   ];
 
   (function runBoot() {

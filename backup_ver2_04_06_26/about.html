@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us | Willametro IT Solutions LLC</title>
   <meta name="description" content="Learn about Willametro IT Solutions LLC — Salem's small business IT and low voltage partner. Owner Jacob Powell and affiliated companies.">
+  <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -78,14 +79,6 @@
               <div class="profile-val">Salem, Keizer, Silverton, Woodburn, Dallas, and surrounding Willamette Valley</div>
             </div>
             <div class="profile-row">
-              <div class="profile-key">Education</div>
-              <div class="profile-val">B.S. Cybersecurity (Minor: Business)<br>Oregon Institute of Technology<br>Magna Cum Laude, Outstanding Scholar 2025</div>
-            </div>
-            <div class="profile-row">
-              <div class="profile-key">Certifications</div>
-              <div class="profile-val">ISC2 &mdash; Certified in Cybersecurity (CC)</div>
-            </div>
-            <div class="profile-row">
               <div class="profile-key">Contact</div>
               <div class="profile-val">
                 <a href="mailto:info@willametro.com">info@willametro.com</a><br>
@@ -132,17 +125,6 @@
       </div>
 
     </div>
-
-    <div style="margin-top:4rem; padding:2rem; background:var(--bg-card); border:1px solid var(--border-mid); text-align:center; max-width:550px; margin-left:auto; margin-right:auto;">
-      <div class="cta-prompt" style="text-align:left; display:inline-block;">./start-project --with=willametro</div>
-      <h3 style="margin-top:0.75rem; font-size:1.1rem;">Ready to work together?</h3>
-      <p style="color:var(--text-muted); font-size:0.78rem; margin:0.6rem 0 1.25rem;">Free initial consultation for all Willamette Valley small businesses.</p>
-      <div class="hero-btns" style="justify-content:center;">
-        <a href="contact.html" class="btn btn-primary">Contact Us</a>
-        <a href="tel:9715998949" class="btn btn-outline">(971) 599-8949</a>
-      </div>
-    </div>
-
   </div>
 </section>
 
@@ -152,7 +134,6 @@
       <div class="footer-brand">
         <div class="nav-logo">WILLAMETRO<span style="color:var(--text-dim)">_IT</span></div>
         <p>Willametro IT Solutions LLC<br>Salem, OR &mdash; Willamette Valley<br>Licensed LE-B | Est. 2024</p>
-        <p style="margin-top:0.6rem;"><a href="mailto:info@willametro.com" style="color:var(--text-dim)">info@willametro.com</a><br><a href="tel:9715998949" style="color:var(--text-dim)">(971) 599-8949</a></p>
       </div>
       <div class="footer-col">
         <h4>Navigate</h4>
@@ -192,10 +173,7 @@
 
 <script>
   function toggleMenu() {
-    var m = document.getElementById('mobile-menu');
-    var btn = document.getElementById('nav-toggle');
-    m.classList.toggle('open');
-    btn.innerHTML = m.classList.contains('open') ? '\u2715' : '\u2630';
+    document.getElementById('mobile-menu').classList.toggle('open');
   }
   document.addEventListener('click', function(e) {
     if (!document.getElementById('nav').contains(e.target)) {

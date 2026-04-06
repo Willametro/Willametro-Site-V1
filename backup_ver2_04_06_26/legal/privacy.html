@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy | Willametro IT Solutions LLC</title>
+  <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -116,7 +117,6 @@
       <div class="footer-brand">
         <div class="nav-logo">WILLAMETRO<span style="color:var(--text-dim)">_IT</span></div>
         <p>Willametro IT Solutions LLC<br>Salem, OR &mdash; Willamette Valley<br>Licensed LE-B | Est. 2024</p>
-        <p style="margin-top:0.6rem;"><a href="mailto:info@willametro.com" style="color:var(--text-dim)">info@willametro.com</a><br><a href="tel:9715998949" style="color:var(--text-dim)">(971) 599-8949</a></p>
       </div>
       <div class="footer-col">
         <h4>Navigate</h4>
@@ -156,10 +156,7 @@
 
 <script>
   function toggleMenu() {
-    var m = document.getElementById('mobile-menu');
-    var btn = document.getElementById('nav-toggle');
-    m.classList.toggle('open');
-    btn.innerHTML = m.classList.contains('open') ? '\u2715' : '\u2630';
+    document.getElementById('mobile-menu').classList.toggle('open');
   }
   document.addEventListener('click', function(e) {
     if (!document.getElementById('nav').contains(e.target)) {

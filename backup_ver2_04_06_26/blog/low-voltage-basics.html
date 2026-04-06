@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Low Voltage Wiring Explained | Willametro IT Blog</title>
   <meta name="description" content="What is low voltage work, what's covered under Oregon LE-B licensing, and why it matters before your walls close.">
+  <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -45,10 +46,10 @@
 <section>
   <div class="container">
     <div class="post-meta">
-      <span><span class="t-dim">date:</span> 2026-02-28</span>
-      <span><span class="t-dim">category:</span> LOW VOLTAGE</span>
-      <span><span class="t-dim">author:</span> Jacob Powell</span>
-      <span><span class="t-dim">read:</span> ~6 min</span>
+      <span>&#128197; 2026-02-28</span>
+      <span>&#128203; LOW VOLTAGE</span>
+      <span>&#128100; Jacob Powell, Willametro IT</span>
+      <span>&#128337; 6 min read</span>
     </div>
 
     <article class="post-content">
@@ -115,21 +116,6 @@
 
     </article>
 
-    <div style="margin-top:3rem; padding:0; background:var(--bg-card); border:1px solid var(--border-mid);">
-      <div class="term-bar">
-        <span class="term-dot r"></span>
-        <span class="term-dot y"></span>
-        <span class="term-dot g"></span>
-        <span class="term-title">cat author.md</span>
-      </div>
-      <div style="padding:1.25rem;">
-        <div style="color:var(--text-bright); font-weight:700; font-size:0.88rem; margin-bottom:0.25rem;">Jacob Powell</div>
-        <div style="color:var(--amber); font-size:0.62rem; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:0.75rem;">Owner / Operator &mdash; Willametro IT Solutions LLC</div>
-        <p style="color:var(--text-muted); font-size:0.77rem; line-height:1.85; margin-bottom:0.5rem;">B.S. Cybersecurity (Minor in Business) from Oregon Institute of Technology &mdash; Magna Cum Laude, Outstanding Scholar 2025. ISC2 Certified in Cybersecurity (CC). Background spanning enterprise IT support, Windows/Linux server administration, Cisco/Meraki networking, and security tooling. Currently serves as Client Engineer 2 at ENTEK International alongside running Willametro IT.</p>
-        <a href="../about.html" style="font-size:0.72rem; color:var(--cyan);">More about Willametro &rarr;</a>
-      </div>
-    </div>
-
     <div class="post-nav">
       <a href="small-business-it.html">&larr; Previous: Why SMBs Need More Than WiFi</a>
       <a href="network-security-tips.html">Next: Cybersecurity Basics &rarr;</a>
@@ -143,7 +129,6 @@
       <div class="footer-brand">
         <div class="nav-logo">WILLAMETRO<span style="color:var(--text-dim)">_IT</span></div>
         <p>Willametro IT Solutions LLC<br>Salem, OR &mdash; Willamette Valley<br>Licensed LE-B | Est. 2024</p>
-        <p style="margin-top:0.6rem;"><a href="mailto:info@willametro.com" style="color:var(--text-dim)">info@willametro.com</a><br><a href="tel:9715998949" style="color:var(--text-dim)">(971) 599-8949</a></p>
       </div>
       <div class="footer-col">
         <h4>Navigate</h4>
@@ -183,10 +168,7 @@
 
 <script>
   function toggleMenu() {
-    var m = document.getElementById('mobile-menu');
-    var btn = document.getElementById('nav-toggle');
-    m.classList.toggle('open');
-    btn.innerHTML = m.classList.contains('open') ? '\u2715' : '\u2630';
+    document.getElementById('mobile-menu').classList.toggle('open');
   }
   document.addEventListener('click', function(e) {
     if (!document.getElementById('nav').contains(e.target)) {
