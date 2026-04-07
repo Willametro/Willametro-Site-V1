@@ -591,14 +591,14 @@
     btn.innerHTML = m.classList.contains('open') ? '\u2715' : '\u2630';
   }
   document.addEventListener('click', function(e) {
-    const nav = document.getElementById('nav');
+    var nav = document.getElementById('nav');
     if (!nav.contains(e.target)) {
       document.getElementById('mobile-menu').classList.remove('open');
     }
   });
 
   // ── Boot Sequence Typewriter ─────────────────────────
-  const bootLines = [
+  var bootLines = [
     { text: 'WILLAMETRO IT SOLUTIONS LLC', cls: 't-white' },
     { text: 'Salem, OR \u2014 Licensed LE-B', cls: 't-dim' },
     { text: '\u2500'.repeat(40), cls: 't-dim' },
@@ -631,16 +631,16 @@
   }
 
   (function runBoot() {
-    const container = document.getElementById('boot-terminal');
-    let i = 0;
-    let totalDelay = 300;
+    var container = document.getElementById('boot-terminal');
+    var i = 0;
+    var totalDelay = 300;
 
     bootLines.forEach(function(line) {
-      const extra = line.delay || 0;
+      var extra = line.delay || 0;
       totalDelay += extra + 80;
-      const d = totalDelay;
+      var d = totalDelay;
       setTimeout(function() {
-        const span = document.createElement('span');
+        var span = document.createElement('span');
         span.className = 'term-line' + (line.cls ? ' ' + line.cls : '');
         span.textContent = line.text || '\u00a0';
         container.appendChild(span);

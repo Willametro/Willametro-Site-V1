@@ -139,7 +139,7 @@
             <label for="message">Message</label>
             <textarea id="message" name="message" placeholder="Tell us about your project or issue..." required></textarea>
           </div>
-          <input type="text" name="_gotcha" style="display:none">
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;top:-9999px;height:0;width:0;overflow:hidden;">
           <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Send Message</button>
         </form>
       </div>
