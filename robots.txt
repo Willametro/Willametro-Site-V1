@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /backup_ver1_04_06_26.html
+Disallow: /backup_ver2_04_06_26/
+
+Sitemap: https://willametro.com/sitemap.xml
