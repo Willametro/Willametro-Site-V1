@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Willametro IT Solutions LLC</title>
+  <meta name="description" content="Technology guides, IT tips, and low voltage insights for small businesses in the Willamette Valley.">
+  <link rel="canonical" href="https://willametro.com/blog.html">
+  <meta property="og:title" content="Blog | Willametro IT Solutions LLC">
+  <meta property="og:description" content="Technology guides, IT tips, and low voltage insights for small businesses in the Willamette Valley.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://willametro.com/blog.html">
+  <meta property="og:site_name" content="Willametro IT Solutions">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Blog | Willametro IT Solutions LLC">
+  <meta name="twitter:description" content="Technology guides, IT tips, and low voltage insights for small businesses in the Willamette Valley.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">WILLAMETRO<span>_IT</span></a>
+    <div class="nav-links">
+      <a href="index.html">home</a>
+      <a href="about.html">about</a>
+      <a href="index.html#services">services</a>
+      <a href="blog.html" class="active">blog</a>
+      <a href="contact.html">contact</a>
+    </div>
+    <a href="tel:9715998949" class="nav-phone">(971) 599-8949</a>
+    <button id="nav-toggle" onclick="toggleMenu()" aria-label="Toggle menu">&#9776;</button>
+  </div>
+  <div id="mobile-menu">
+    <a href="index.html">home</a>
+    <a href="about.html">about</a>
+    <a href="index.html#services">services</a>
+    <a href="blog.html">blog</a>
+    <a href="contact.html">contact</a>
+    <a href="tel:9715998949">(971) 599-8949</a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">home</a><span class="sep">/</span><span class="cur">blog</span>
+    </div>
+    <h1>Knowledge Base</h1>
+    <p>Guides, tips, and insights for small business technology decisions.</p>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+
+    <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:2rem;" id="tag-filters">
+      <button class="tag-btn active" data-tag="all" onclick="filterPosts('all')">All Posts</button>
+      <button class="tag-btn" data-tag="MANAGED IT" onclick="filterPosts('MANAGED IT')">Managed IT</button>
+      <button class="tag-btn" data-tag="LOW VOLTAGE" onclick="filterPosts('LOW VOLTAGE')">Low Voltage</button>
+      <button class="tag-btn" data-tag="CYBERSECURITY" onclick="filterPosts('CYBERSECURITY')">Cybersecurity</button>
+    </div>
+
+    <div class="blog-full-grid" id="post-grid">
+
+      <a href="blog/small-business-it.html" class="blog-card" data-tag="MANAGED IT">
+        <div class="blog-card-head">
+          <span class="blog-date">2026-03-15</span>
+          <span class="blog-tag">MANAGED IT</span>
+        </div>
+        <div class="blog-body">
+          <div class="blog-title">Why Small Businesses Need More Than Just WiFi</div>
+          <p class="blog-excerpt">Most small business owners treat networking as an afterthought. Here's why a structured approach to your IT foundation pays off from day one.</p>
+        </div>
+        <div class="blog-foot"><span class="read-more">Read more</span></div>
+      </a>
+
+      <a href="blog/low-voltage-basics.html" class="blog-card" data-tag="LOW VOLTAGE">
+        <div class="blog-card-head">
+          <span class="blog-date">2026-02-28</span>
+          <span class="blog-tag">LOW VOLTAGE</span>
+        </div>
+        <div class="blog-body">
+          <div class="blog-title">Low Voltage Wiring Explained for Business Owners</div>
+          <p class="blog-excerpt">What is low voltage work, what's covered under Oregon LE-B licensing, and why it matters before your walls close up during a build or remodel.</p>
+        </div>
+        <div class="blog-foot"><span class="read-more">Read more</span></div>
+      </a>
+
+      <a href="blog/network-security-tips.html" class="blog-card" data-tag="CYBERSECURITY">
+        <div class="blog-card-head">
+          <span class="blog-date">2026-02-10</span>
+          <span class="blog-tag">CYBERSECURITY</span>
+        </div>
+        <div class="blog-body">
+          <div class="blog-title">5 Cybersecurity Basics Every Salem SMB Should Have</div>
+          <p class="blog-excerpt">You don't need an enterprise budget to protect your business. These five fundamentals cover most of the risk for most small businesses.</p>
+        </div>
+        <div class="blog-foot"><span class="read-more">Read more</span></div>
+      </a>
+
+    </div>
+
+    <div style="margin-top:3rem; padding:1.5rem; background:var(--bg-card); border:1px solid var(--border-mid); max-width:500px;">
+      <div class="section-label" style="font-size:0.62rem; margin-bottom:0.5rem;">Stay Updated</div>
+      <p style="color:var(--text-muted); font-size:0.77rem; margin-bottom:1rem;">New posts on IT, low voltage, and small business tech. No spam.</p>
+      <form action="https://formspree.io/f/mnnbrgjq" method="POST" style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+        <input type="hidden" name="subject" value="Blog Newsletter Signup">
+        <input type="email" name="email" placeholder="your@email.com"
+          style="flex:1; min-width:180px; background:var(--bg); border:1px solid var(--border-mid); color:var(--text-bright); font-family:var(--font); font-size:0.78rem; padding:0.5rem 0.75rem; outline:none;">
+        <button type="submit" class="btn btn-outline" style="padding:0.5rem 1rem;">Subscribe</button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo">WILLAMETRO<span style="color:var(--text-dim)">_IT</span></div>
+        <p>Willametro IT Solutions LLC<br>Salem, OR &mdash; Willamette Valley<br>Licensed LE-B | Est. 2024</p>
+        <p style="margin-top:0.6rem;"><a href="mailto:info@willametro.com" style="color:var(--text-dim)">info@willametro.com</a><br><a href="tel:9715998949" style="color:var(--text-dim)">(971) 599-8949</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Partners</h4>
+        <ul>
+          <li><a href="https://www.facebook.com/people/Andrade-Construction-LLC/100063745493183/" target="_blank" rel="noopener">Andrade Construction</a></li>
+          <li><a href="https://flawlesswebdesign.com/home" target="_blank" rel="noopener">Flawless Web LLC</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="legal/privacy.html">Privacy Policy</a></li>
+          <li><a href="legal/terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">&copy; 2024&ndash;2026 Willametro IT Solutions LLC. All rights reserved.</span>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/company/104410669/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:info@willametro.com">Email</a>
+        <a href="tel:9715998949">Phone</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .tag-btn {
+    background: var(--bg-card); border: 1px solid var(--border-mid);
+    color: var(--text-muted); font-family: var(--font);
+    font-size: 0.7rem; padding: 0.3rem 0.75rem;
+    letter-spacing: 0.06em; transition: all 0.15s;
+  }
+  .tag-btn:hover, .tag-btn.active {
+    color: var(--green); border-color: var(--green);
+    background: var(--bg-hover);
+  }
+</style>
+
+<script>
+  function toggleMenu() {
+    var m = document.getElementById('mobile-menu');
+    var btn = document.getElementById('nav-toggle');
+    m.classList.toggle('open');
+    btn.innerHTML = m.classList.contains('open') ? '\u2715' : '\u2630';
+  }
+  document.addEventListener('click', function(e) {
+    if (!document.getElementById('nav').contains(e.target)) {
+      document.getElementById('mobile-menu').classList.remove('open');
+    }
+  });
+
+  function filterPosts(tag) {
+    document.querySelectorAll('.tag-btn').forEach(function(b) {
+      b.classList.toggle('active', b.dataset.tag === tag);
+    });
+    document.querySelectorAll('#post-grid .blog-card').forEach(function(c) {
+      c.style.display = (tag === 'all' || c.dataset.tag === tag) ? 'flex' : 'none';
+    });
+  }
+</script>
+</body>
+</html>
