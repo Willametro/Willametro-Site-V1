@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Page Not Found | Willametro IT Solutions LLC</title>
+  <meta name="description" content="Page not found. Return to Willametro IT Solutions for IT support, low voltage installation, and technology services in Salem, OR.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">WILLAMETRO<span>_IT</span></a>
+    <div class="nav-links">
+      <a href="index.html">home</a>
+      <a href="about.html">about</a>
+      <a href="index.html#services">services</a>
+      <a href="blog.html">blog</a>
+      <a href="contact.html">contact</a>
+    </div>
+    <a href="tel:9715998949" class="nav-phone">(971) 599-8949</a>
+    <button id="nav-toggle" onclick="toggleMenu()" aria-label="Toggle menu">&#9776;</button>
+  </div>
+  <div id="mobile-menu">
+    <a href="index.html">home</a>
+    <a href="about.html">about</a>
+    <a href="index.html#services">services</a>
+    <a href="blog.html">blog</a>
+    <a href="contact.html">contact</a>
+    <a href="tel:9715998949">(971) 599-8949</a>
+  </div>
+</nav>
+
+<section style="min-height:calc(100vh - var(--nav-h) - 200px); display:flex; align-items:center;">
+  <div class="container">
+    <div style="max-width:520px;">
+      <div class="hero-term">
+        <div class="term-bar">
+          <span class="term-dot r"></span>
+          <span class="term-dot y"></span>
+          <span class="term-dot g"></span>
+          <span class="term-title">willametro@system: ~</span>
+        </div>
+        <div class="term-body" style="min-height:auto; padding:1.5rem;">
+          <span class="term-line t-dim">$ navigate --to="<span id="path-display"></span>"</span>
+          <span class="term-line">&nbsp;</span>
+          <span class="term-line t-red">ERROR 404: path not found</span>
+          <span class="term-line t-dim">The requested page does not exist on this server.</span>
+          <span class="term-line">&nbsp;</span>
+          <span class="term-line t-dim">Suggested actions:</span>
+          <span class="term-line t-green">&nbsp; cd <a href="index.html" style="color:var(--green);">~/home</a></span>
+          <span class="term-line t-green">&nbsp; cd <a href="contact.html" style="color:var(--green);">~/contact</a></span>
+          <span class="term-line t-green">&nbsp; cd <a href="blog.html" style="color:var(--green);">~/blog</a></span>
+          <span class="term-line">&nbsp;</span>
+          <span class="term-line t-green cursor">$</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom" style="border-top:1px solid var(--border-mid); padding-top:1.25rem;">
+      <span class="footer-copy">&copy; 2024&ndash;2026 Willametro IT Solutions LLC. All rights reserved.</span>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/company/104410669/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:info@willametro.com">Email</a>
+        <a href="tel:9715998949">Phone</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu() {
+    var m = document.getElementById('mobile-menu');
+    var btn = document.getElementById('nav-toggle');
+    m.classList.toggle('open');
+    btn.innerHTML = m.classList.contains('open') ? '\u2715' : '\u2630';
+  }
+  document.addEventListener('click', function(e) {
+    if (!document.getElementById('nav').contains(e.target)) {
+      document.getElementById('mobile-menu').classList.remove('open');
+    }
+  });
+  document.getElementById('path-display').textContent = window.location.pathname;
+</script>
+</body>
+</html>
