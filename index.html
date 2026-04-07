@@ -17,6 +17,7 @@
   <meta name="twitter:description" content="Salem-based low voltage installation, managed IT, networking, cybersecurity, and web development. Serving the Willamette Valley since 2024.">
   <meta name="geo.region" content="US-OR">
   <meta name="geo.placename" content="Salem">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="style.css">
   <script type="application/ld+json">
   {
@@ -62,6 +63,54 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What areas do you serve?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Willametro IT primarily serves Salem, Keizer, Silverton, Woodburn, Dallas, and the broader Willamette Valley. If you're outside these areas but still in western Oregon, reach out — we're happy to discuss your project."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are you licensed to do low voltage work in Oregon?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Willametro IT Solutions LLC holds an Oregon Limited Energy — B (LE-B) contractor license issued by the Oregon Construction Contractors Board (CCB). This covers structured cabling, security cameras, access control, AV systems, and intercoms. Verify at oregon.gov/ccb."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is low voltage wiring?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Low voltage refers to electrical systems operating at 50 volts or below — data cabling, security cameras, access control, AV systems, and intercoms. In Oregon, this work legally requires an LE contractor license."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer free consultations?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — free initial consultations for all small businesses in the Willamette Valley. We assess your current setup and give you an honest picture of your options without a sales pitch."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's the difference between managed IT and break-fix support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Break-fix is reactive: something breaks, you call, you pay. Managed IT is proactive: we monitor your systems, apply patches, and catch issues before they cause downtime — for a flat monthly fee."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -76,6 +125,7 @@
       <a href="blog.html">blog</a>
       <a href="contact.html">contact</a>
     </div>
+    <a href="tel:9715998949" class="nav-phone">(971) 599-8949</a>
     <button id="nav-toggle" onclick="toggleMenu()" aria-label="Toggle menu">&#9776;</button>
   </div>
   <div id="mobile-menu">
@@ -84,6 +134,7 @@
     <a href="index.html#services">services</a>
     <a href="blog.html">blog</a>
     <a href="contact.html">contact</a>
+    <a href="tel:9715998949">(971) 599-8949</a>
   </div>
 </nav>
 
@@ -298,6 +349,21 @@
   </div>
 </div>
 
+<!-- ── SERVICE AREAS ──────────────────────────────────────── -->
+<div id="service-areas">
+  <div class="container">
+    <div class="areas-inner">
+      <span class="areas-label">Service Area</span>
+      <a href="areas/salem-or.html" class="area-link">Salem, OR</a>
+      <a href="areas/keizer-or.html" class="area-link">Keizer, OR</a>
+      <a href="areas/silverton-or.html" class="area-link">Silverton, OR</a>
+      <a href="areas/woodburn-or.html" class="area-link">Woodburn, OR</a>
+      <a href="areas/dallas-or.html" class="area-link">Dallas, OR</a>
+      <span class="area-link" style="border-color:transparent; color:var(--text-dim);">+ Willamette Valley</span>
+    </div>
+  </div>
+</div>
+
 <!-- ── PARTNERS ──────────────────────────────────────────── -->
 <section id="partners">
   <div class="container">
@@ -380,6 +446,76 @@
 
     <div style="margin-top:2rem; text-align:center;">
       <a href="blog.html" class="btn btn-outline">View All Posts</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ───────────────────────────────────────────────── -->
+<section id="faq">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Common Questions</div>
+      <h2 class="section-title">FAQ</h2>
+      <p class="section-sub">Quick answers for Willamette Valley business owners.</p>
+    </div>
+
+    <div class="faq-list" id="faq-list">
+
+      <div class="faq-item open">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="true">
+          <span class="faq-q-prefix">Q:</span>
+          <span class="faq-q-text">What areas do you serve?</span>
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-a">
+          Willametro IT primarily serves Salem, Keizer, Silverton, Woodburn, Dallas, and the broader Willamette Valley. If you're outside these areas but still in western Oregon, <a href="contact.html">reach out</a> — we're happy to discuss your project.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="faq-q-prefix">Q:</span>
+          <span class="faq-q-text">Are you licensed to do low voltage work in Oregon?</span>
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-a">
+          Yes. Willametro IT Solutions LLC holds an Oregon Limited Energy — B (LE-B) contractor license issued by the Oregon Construction Contractors Board (CCB). This license covers structured cabling, security cameras, access control, AV systems, intercoms, and similar low voltage installations. You can verify our license at <a href="https://oregon.gov/ccb" target="_blank" rel="noopener">oregon.gov/ccb</a>.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="faq-q-prefix">Q:</span>
+          <span class="faq-q-text">What is low voltage wiring?</span>
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-a">
+          Low voltage refers to electrical systems operating at 50 volts or below — data cabling, security cameras, access control, AV systems, and intercoms. Unlike standard electrical work, low voltage carries data and signal rather than high-power electricity. In Oregon, this work legally requires an LE contractor license. Read our full explainer in the <a href="blog/low-voltage-basics.html">blog</a>.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="faq-q-prefix">Q:</span>
+          <span class="faq-q-text">Do you offer free consultations?</span>
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-a">
+          Yes — free initial consultations for all small businesses in the Willamette Valley. We'll assess your current setup, identify gaps, and give you an honest picture of your options without a sales pitch. <a href="contact.html">Schedule one here</a>.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="faq-q-prefix">Q:</span>
+          <span class="faq-q-text">What's the difference between managed IT and break-fix support?</span>
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-a">
+          Break-fix is reactive: something breaks, you call, you pay. Managed IT is proactive: we monitor your systems, apply patches, and catch issues before they cause downtime — for a flat monthly fee. For most businesses where downtime means lost revenue, managed IT pays for itself quickly.
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -479,6 +615,20 @@
     { text: '', cls: '' },
     { text: '$', cls: 't-green cursor', delay: 200 }
   ];
+
+  // ── FAQ Toggle ───────────────────────────────────────────
+  function toggleFaq(btn) {
+    var item = btn.parentElement;
+    var isOpen = item.classList.contains('open');
+    document.querySelectorAll('#faq-list .faq-item').forEach(function(i) {
+      i.classList.remove('open');
+      i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  }
 
   (function runBoot() {
     const container = document.getElementById('boot-terminal');

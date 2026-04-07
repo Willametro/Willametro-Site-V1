@@ -133,8 +133,16 @@ section { padding: 5rem 0; }
 #mobile-menu a::before { content: '$ '; color: var(--green); }
 #mobile-menu a:last-child { border-bottom: none; }
 #mobile-menu a:hover { color: var(--amber); }
+/* Nav phone */
+.nav-phone {
+  font-size: 0.72rem; color: var(--green);
+  border: 1px solid var(--border-mid); padding: 0.28rem 0.65rem;
+  letter-spacing: 0.03em; white-space: nowrap;
+}
+.nav-phone:hover { color: var(--amber); border-color: var(--amber); }
 @media (max-width: 768px) {
   .nav-links { display: none; }
+  .nav-phone  { display: none; }
   #nav-toggle { display: block; }
 }
 
@@ -291,6 +299,57 @@ section { padding: 5rem 0; }
 .read-more { font-size: 0.7rem; color: var(--cyan); }
 .read-more::after { content: ' →'; }
 .blog-card:hover .read-more { color: var(--amber); }
+
+/* ── FAQ ────────────────────────────────────────────────── */
+#faq { background: var(--bg); }
+.faq-list { max-width: 760px; border: 1px solid var(--border-mid); }
+.faq-item { border-bottom: 1px solid var(--border-mid); }
+.faq-item:last-child { border-bottom: none; }
+.faq-q {
+  width: 100%; text-align: left; background: var(--bg-card);
+  padding: 1rem 1.25rem; display: flex; align-items: flex-start;
+  gap: 0.6rem; cursor: pointer; border: none;
+  color: var(--text-bright); font-size: 0.84rem; font-weight: 700;
+  line-height: 1.4; transition: background 0.15s;
+}
+.faq-q:hover { background: var(--bg-hover); }
+.faq-q-prefix { color: var(--green); flex-shrink: 0; font-size: 0.72rem; padding-top: 0.1rem; }
+.faq-q-text { flex: 1; }
+.faq-toggle { color: var(--text-dim); font-size: 0.75rem; flex-shrink: 0; padding-top: 0.05rem; transition: transform 0.2s; }
+.faq-item.open .faq-toggle { transform: rotate(45deg); color: var(--green); }
+.faq-a {
+  display: none; padding: 0.9rem 1.25rem 1.1rem 2.6rem;
+  color: var(--text-muted); font-size: 0.8rem; line-height: 1.85;
+  background: var(--bg); border-top: 1px solid var(--border);
+}
+.faq-item.open .faq-a { display: block; }
+.faq-a a { color: var(--cyan); }
+.faq-a a:hover { color: var(--amber); }
+
+/* ── Service Areas strip ─────────────────────────────────── */
+#service-areas {
+  background: var(--bg-alt); padding: 2rem 0;
+  border-top: 1px solid var(--border-mid);
+  border-bottom: 1px solid var(--border-mid);
+}
+.areas-inner {
+  display: flex; align-items: center; flex-wrap: wrap; gap: 0.5rem 1.5rem;
+}
+.areas-label {
+  font-size: 0.62rem; color: var(--text-dim); letter-spacing: 0.1em;
+  text-transform: uppercase; white-space: nowrap;
+}
+.areas-label::before { content: '$ '; color: var(--green); }
+.area-link {
+  font-size: 0.75rem; color: var(--text-muted);
+  border: 1px solid var(--border-mid); padding: 0.2rem 0.65rem;
+  transition: all 0.15s;
+}
+.area-link:hover { color: var(--green); border-color: var(--green); }
+
+/* ── Area Pages ──────────────────────────────────────────── */
+.area-intro { max-width: 680px; }
+.area-intro p { color: var(--text-muted); font-size: 0.82rem; line-height: 1.85; margin-bottom: 0.75rem; }
 
 /* ── CTA ────────────────────────────────────────────────── */
 #cta { background: var(--bg); padding: 5rem 0; text-align: center; }
