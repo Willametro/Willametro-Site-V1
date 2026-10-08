@@ -2,7 +2,7 @@
 
 **willametro.com** — Low voltage infrastructure, managed IT, and full-service technology support for small businesses in the Willamette Valley.
 
-Salem, OR | Licensed LE-B | Est. 2024
+Salem, OR | Est. 2024
 
 ## Site Structure
 
