@@ -186,6 +186,17 @@ section { padding: 5rem 0; }
 .term-line { display: block; }
 .term-line.p::before { content: '> '; color: var(--green); }
 
+/* Interactive prompt: a hidden input mirrored into the line so the block cursor stays */
+.hero-term { cursor: text; }
+.term-prompt { position: relative; white-space: pre-wrap; word-break: break-all; }
+.term-typed { color: var(--text-bright); }
+.term-input {
+  position: absolute; inset: 0; width: 100%;
+  opacity: 0; border: 0; padding: 0; margin: 0;
+  background: transparent; color: transparent; caret-color: transparent;
+  font: inherit; font-size: 16px; /* 16px stops iOS zooming on focus */
+}
+
 /* ── Buttons ────────────────────────────────────────────── */
 .btn {
   display: inline-flex; align-items: center; gap: 0.4rem;

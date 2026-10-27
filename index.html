@@ -747,7 +747,7 @@
     { text: '\u2500'.repeat(40), cls: 't-dim', delay: 300 },
     { text: 'SYSTEM READY. Serving the Willamette Valley.', cls: 't-amber', delay: 400 },
     { text: '', cls: '' },
-    { text: '$', cls: 't-green cursor', delay: 200 }
+    { prompt: true, delay: 200 }
   ];
 
   // ── FAQ Toggle ───────────────────────────────────────────
@@ -774,6 +774,7 @@
       totalDelay += extra + 80;
       var d = totalDelay;
       setTimeout(function() {
+        if (line.prompt) { startShell(container); return; }
         var span = document.createElement('span');
         span.className = 'term-line' + (line.cls ? ' ' + line.cls : '');
         span.textContent = line.text || '\u00a0';
@@ -782,6 +783,108 @@
       }, d);
     });
   })();
+
+  // ── Interactive Shell ────────────────────────────────
+  // The final "$" accepts typed commands. Unlisted: cyberpunkRED jacks in to the game.
+  var shellCommands = {
+    help: function() {
+      return [
+        ['Available commands:', 't-white'],
+        ['services \u2014 what we do', 't-dim'],
+        ['about \u2014 who we are', 't-dim'],
+        ['contact \u2014 get in touch', 't-dim'],
+        ['blog \u2014 read the blog', 't-dim'],
+        ['whoami \u2014 print current user', 't-dim'],
+        ['clear \u2014 clear the screen', 't-dim']
+      ];
+    },
+    services: function() { go('index.html#services'); return [['Opening services...', 't-dim']]; },
+    about:    function() { go('about.html');   return [['Opening about...', 't-dim']]; },
+    contact:  function() { go('contact.html'); return [['Opening contact...', 't-dim']]; },
+    blog:     function() { go('blog.html');    return [['Opening blog...', 't-dim']]; },
+    whoami:   function() { return [['guest', '']]; },
+    ls:       function() { return [['about  blog  contact  services', '']]; },
+    sudo:     function() { return [['guest is not in the sudoers file. This incident will be reported.', 't-amber']]; },
+    cyberpunkred: function() {
+      setTimeout(function() { window.location.href = 'https://play.willametro.com/'; }, 1400);
+      return [
+        ['Wake up, choom. Routing to Night City...', 't-amber'],
+        ['  [NEURAL LINK] \u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7 OK', 't-green'],
+        ['Jacking in.', 't-green']
+      ];
+    }
+  };
+
+  function go(url) { setTimeout(function() { window.location.href = url; }, 500); }
+
+  function startShell(container) {
+    var maxLines = container.children.length + 1;
+    var history = [], histPos = 0;
+
+    var line = document.createElement('label');
+    line.className = 'term-line term-prompt t-green';
+    var typed = document.createElement('span');
+    typed.className = 'term-typed';
+    var cursor = document.createElement('span');
+    cursor.className = 'cursor';
+    var input = document.createElement('input');
+    input.className = 'term-input';
+    input.type = 'text';
+    input.setAttribute('aria-label', 'Terminal command');
+    input.setAttribute('autocomplete', 'off');
+    input.setAttribute('autocapitalize', 'off');
+    input.setAttribute('autocorrect', 'off');
+    input.setAttribute('spellcheck', 'false');
+    input.maxLength = 60;
+    line.appendChild(document.createTextNode('$ '));
+    line.appendChild(typed);
+    line.appendChild(cursor);
+    line.appendChild(input);
+    container.appendChild(line);
+
+    function print(text, cls) {
+      var span = document.createElement('span');
+      span.className = 'term-line' + (cls ? ' ' + cls : '');
+      span.textContent = text || '\u00a0';
+      container.insertBefore(span, line);
+      while (container.children.length > maxLines) container.removeChild(container.firstChild);
+    }
+
+    function sync() { typed.textContent = input.value; }
+
+    input.addEventListener('input', sync);
+    input.addEventListener('keydown', function(e) {
+      if (e.key === 'ArrowUp' || e.key === 'ArrowDown') {
+        if (!history.length) return;
+        e.preventDefault();
+        histPos = Math.max(0, Math.min(history.length, histPos + (e.key === 'ArrowUp' ? -1 : 1)));
+        input.value = history[histPos] || '';
+        sync();
+        return;
+      }
+      if (e.key !== 'Enter') return;
+      e.preventDefault();
+      var raw = input.value.trim();
+      input.value = '';
+      sync();
+      print('$ ' + raw, 't-green');
+      if (!raw) return;
+      history.push(raw);
+      histPos = history.length;
+      var cmd = raw.split(/\s+/)[0].toLowerCase();
+      if (cmd === 'clear') {
+        while (container.firstChild !== line) container.removeChild(container.firstChild);
+        return;
+      }
+      var run = Object.prototype.hasOwnProperty.call(shellCommands, cmd) ? shellCommands[cmd] : null;
+      var out = run ? run() : [[cmd + ': command not found. Type help for a list.', 't-dim']];
+      out.forEach(function(o) { print(o[0], o[1]); });
+    });
+
+    input.addEventListener('focus', function() { line.classList.add('focused'); });
+    input.addEventListener('blur', function() { line.classList.remove('focused'); });
+    container.closest('.hero-term').addEventListener('click', function() { input.focus({ preventScroll: true }); });
+  }
 </script>
 
 </body>
