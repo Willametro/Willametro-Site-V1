@@ -785,7 +785,7 @@
   })();
 
   // ── Interactive Shell ────────────────────────────────
-  // The final "$" accepts typed commands. Unlisted: cyberpunkRED jacks in to the game.
+  // The final "$" accepts typed commands.
   var shellCommands = {
     help: function() {
       return [
@@ -804,15 +804,7 @@
     blog:     function() { go('blog.html');    return [['Opening blog...', 't-dim']]; },
     whoami:   function() { return [['guest', '']]; },
     ls:       function() { return [['about  blog  contact  services', '']]; },
-    sudo:     function() { return [['guest is not in the sudoers file. This incident will be reported.', 't-amber']]; },
-    cyberpunkred: function() {
-      setTimeout(function() { window.location.href = 'https://play.willametro.com/'; }, 1400);
-      return [
-        ['Wake up, choom. Routing to Night City...', 't-amber'],
-        ['  [NEURAL LINK] \u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7 OK', 't-green'],
-        ['Jacking in.', 't-green']
-      ];
-    }
+    sudo:     function() { return [['guest is not in the sudoers file. This incident will be reported.', 't-amber']]; }
   };
 
   function go(url) { setTimeout(function() { window.location.href = url; }, 500); }
